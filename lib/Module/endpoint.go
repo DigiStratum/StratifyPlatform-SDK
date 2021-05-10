@@ -26,9 +26,7 @@ import (
 
 // Required: Endpoint public interface
 type EndpointIfc interface {
-	GetName() string
-	GetVersion() string
-	GetId() string
+	GetInfo() EndpointInfoIfc
 }
 
 // Optional: Endpoint public interface: Configurability
