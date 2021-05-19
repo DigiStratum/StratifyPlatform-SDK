@@ -36,41 +36,41 @@ type ConfigurableEndpointIfc interface {
 
 // Optional: Endpoint public interface: ANY METHOD request handling
 type AnyEndpointIfc interface {
-	HandleAny(request rest.HttpRequestIfc) *rest.HttpResponse
+	HandleAny(request rest.HttpRequestIfc) rest.HttpResponseIfc
 }
 
 // Optional: Endpoint public interface: GET request handling
 type GetEndpointIfc interface {
-	HandleGet(request rest.HttpRequestIfc) *rest.HttpResponse
+	HandleGet(request rest.HttpRequestIfc) rest.HttpResponseIfc
 }
 
 // Optional: Endpoint public interface: POST request handling
 type PostEndpointIfc interface {
-	HandlePost(request rest.HttpRequestIfc) *rest.HttpResponse
+	HandlePost(request rest.HttpRequestIfc) rest.HttpResponseIfc
 }
 
 // Optional: Endpoint public interface: PUT request handling
 type PutEndpointIfc interface {
-	HandlePut(request rest.HttpRequestIfc) *rest.HttpResponse
+	HandlePut(request rest.HttpRequestIfc) rest.HttpResponseIfc
 }
 
 // Optional: Endpoint public interface: OPTIONS request handling
 type OptionsEndpointIfc interface {
-	HandleOptions(request rest.HttpRequestIfc) *rest.HttpResponse
+	HandleOptions(request rest.HttpRequestIfc) rest.HttpResponseIfc
 }
 
 // Optional: Endpoint public interface: HEAD request handling
 type HeadEndpointIfc interface {
-	HandleHead(request rest.HttpRequestIfc) *rest.HttpResponse
+	HandleHead(request rest.HttpRequestIfc) rest.HttpResponseIfc
 }
 
 // Optional: Endpoint public interface: DELETE request handling
 type DeleteEndpointIfc interface {
-	HandleDelete(request rest.HttpRequestIfc) *rest.HttpResponse
+	HandleDelete(request rest.HttpRequestIfc) rest.HttpResponseIfc
 }
 
 // Optional: Endpoint public interface: PATCH request handling
 type PatchEndpointIfc interface {
-	HandlePatch(request rest.HttpRequestIfc) *rest.HttpResponse
+	HandlePatch(request rest.HttpRequestIfc) rest.HttpResponseIfc
 }
 
