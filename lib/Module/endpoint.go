@@ -31,7 +31,7 @@ type EndpointIfc interface {
 
 // Optional: Endpoint public interface: Configurability
 type ConfigurableEndpointIfc interface {
-	Configure(endpointConfig *lib.Config)
+	Configure(endpointConfig lib.ConfigIfc)
 }
 
 // Optional: Endpoint public interface: ANY METHOD request handling

@@ -23,7 +23,7 @@ type securityPolicy struct {
 }
 
 // Make a new one of these!
-func NewSecurityPolicy(config *lib.Config) SecurityPolicyIfc {
+func NewSecurityPolicy(config lib.ConfigIfc) SecurityPolicyIfc {
 
 	// By default we do nothing
 	sp := securityPolicy{

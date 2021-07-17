@@ -7,11 +7,11 @@ import(
 // Required: Module public interface
 type ModuleIfc interface {
 	GetName() string
-	GetConfig() *lib.Config
+	GetConfig() lib.ConfigIfc
 }
 
 // Optional: Configurable Module public interface
 type ConfigurableModuleIfc interface {
-	Configure(moduleConfig *lib.Config) error
+	Configure(moduleConfig lib.ConfigIfc) error
 }
 
