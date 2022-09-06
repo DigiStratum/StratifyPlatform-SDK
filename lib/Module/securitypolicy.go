@@ -32,7 +32,8 @@ func NewSecurityPolicy(config cfg.ConfigIfc) SecurityPolicyIfc {
 
 	// By configuration, we start enabling things...
 	if ! config.IsEmpty() {
-		if "true" == config.Get("isrequired") {
+		required := config.Get("isrequired")
+		if "true" == *required {
 			sp.SetRequireAuthentication(true)
 		}
 	}
