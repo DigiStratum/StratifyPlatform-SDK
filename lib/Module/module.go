@@ -1,7 +1,7 @@
 package module
 
 import(
-	lib "github.com/DigiStratum/GoLib"
+	cfg "github.com/DigiStratum/GoLib/Config"
 )
 
 // Required: Module public interface
@@ -12,6 +12,6 @@ type ModuleIfc interface {
 
 // Optional: Configurable Module public interface
 type ConfigurableModuleIfc interface {
-	Configure(moduleConfig lib.ConfigIfc) error
+	Configure(moduleConfig cfg.ConfigIfc) error
 }
 

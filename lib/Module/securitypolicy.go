@@ -9,7 +9,7 @@ TODO: Expand to actually check HttpRequest auth with configured authenticator(s)
 */
 
 import (
-	lib "github.com/DigiStratum/GoLib"
+	cfg "github.com/DigiStratum/GoLib/Config"
 )
 
 // Security Policy public interface
@@ -23,7 +23,7 @@ type securityPolicy struct {
 }
 
 // Make a new one of these!
-func NewSecurityPolicy(config lib.ConfigIfc) SecurityPolicyIfc {
+func NewSecurityPolicy(config cfg.ConfigIfc) SecurityPolicyIfc {
 
 	// By default we do nothing
 	sp := securityPolicy{

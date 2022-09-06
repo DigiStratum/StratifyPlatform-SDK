@@ -20,7 +20,7 @@ where there is not an implementation provided for that method.
 */
 
 import (
-	lib "github.com/DigiStratum/GoLib"
+	cfg "github.com/DigiStratum/GoLib/Config"
 	rest "github.com/DigiStratum/GoLib/RestApi"
 )
 
@@ -31,7 +31,7 @@ type EndpointIfc interface {
 
 // Optional: Endpoint public interface: Configurability
 type ConfigurableEndpointIfc interface {
-	Configure(endpointConfig lib.ConfigIfc)
+	Configure(endpointConfig cfg.ConfigIfc)
 }
 
 // Optional: Endpoint public interface: ANY METHOD request handling
