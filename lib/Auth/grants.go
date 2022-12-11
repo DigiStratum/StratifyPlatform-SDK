@@ -22,12 +22,12 @@ import (
 	hash "github.com/DigiStratum/GoLib/Data/hashmap"
 )
 
-type ScopedAuthorizationGrantsIfc interface {
+type GrantsIfc interface {
 	// Embed HashMapIfc to inherit all of that...
 	hash.HashMapIfc
 }
 
-type scopedAuthorizationGrants struct {
+type grants struct {
 	// Embed HashMap struct to inherit all of that...
 	*hash.HashMap
 	scopeName	string
@@ -37,18 +37,18 @@ type scopedAuthorizationGrants struct {
 // Factory Functions
 // -------------------------------------------------------------------------------------------------
 
-func NewScopedAuthorizationGrants(scopeName string) *scopedAuthorizationGrants {
-	return &scopedAuthorizationGrants{
+func NewGrants(scopeName string) *grants {
+	return &grants{
 		HashMap:	hash.NewHashMap(),
 		scopeName:	scopeName,
 	}
 }
 
 // -------------------------------------------------------------------------------------------------
-// ScopedAuthorizationGrantsIfc Implementation
+// GrantsIfc Implementation
 // -------------------------------------------------------------------------------------------------
 
-func (r *scopedAuthorizationGrants) GetScopeName() string {
+func (r *grants) GetScopeName() string {
 	return r.scopeName
 }
 
