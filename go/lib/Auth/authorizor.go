@@ -10,6 +10,6 @@ some action relative to one or more Protected Resources.
 
 type AuthorizorIfc interface {
 	// Compare Identity's ScopedAuthorizationGrants, named action against ProtectedResource
-	IsAuthorized(identity Identity, action string, resource ProtectedResource) (bool, error)
+	IsAuthorized(identity IdentityIfc, action string, resource ProtectedResource) (bool, error)
 }
 

@@ -88,5 +88,7 @@ func (r *session) ToJson() (*string, error) {
 // -------------------------------------------------------------------------------------------------
 
 func (r *session) FromJson(jsonString *string) error {
+	if nil == jsonString { return fmt.Errorf("Can't deserialize nil JSON string") }
+	return r.UnmarshalJSON([]byte(*jsonString))
 }
 
