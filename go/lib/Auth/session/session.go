@@ -1,4 +1,4 @@
-package auth
+package session
 
 /*
 
@@ -8,16 +8,20 @@ We are backed by a GoLib HashMap, so we can extend the session data for this Ide
 name=value string pair, which includes ANY interface that supports de|serialization from/to string.
 
 TODO:
+ * Convert to be an extension of Object instead of HashMap?
  * Expand details specific to the session, outside of the HashMap properties such as anything related
    to session validity, expiration, touch() to refresh, etc.
 */
 
 import (
+	auth "github.com/DigiStratum/StratifyPlatfork-SDK/go/lib/Auth"
 	hash "github.com/DigiStratum/GoLib/Data/hashmap"
 )
 
 type SessionIfc interface {
-	has.HashMapIfc
+	hash.HashMapIfc
+	json.JsonSerializableIfc
+	json.JsonDeserializableIfc
 }
 
 type session struct {
