@@ -56,16 +56,17 @@ func (r *sessionstore) InjectDependencies(deps di.DependenciesIfc) error {
 
         }
 
-	// TODO: Recieve the MutableObjectStoreIfc that we need to save/load session data to/from
+	// Recieve the MutableObjectStoreIfc that we need to save/load session data to/from
         isosdep := deps.Get("sessionObjectStore")
-        if isos, ok := isosdep.(store.MutableObjectStoreIfc); ok {
-                r.sessionObjectStore= isos
+        if mosi, ok := isosdep.(store.MutableObjectStoreIfc); ok {
+                r.sessionObjectStore = mosi
         } else {
                 return log.GetLogger().Error(
                         "SessionStore.InjectDependencies() - Injected dependency 'sessionObjectStore' does not implement MutableObjectStoreIfc as required",
                 )
         }
 
+	return nil
 }
 
 // -------------------------------------------------------------------------------------------------
