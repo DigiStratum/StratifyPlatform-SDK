@@ -14,6 +14,6 @@ Digest  [RFC7616] https://www.iana.org/go/rfc7616
 
 type AuthenticatorIfc interface {
 	// Authenticate the credential and return nil+error or Identity/no error on success
-	Authenticate(credential SerializedCredentialIfc) (IdentitiyIfc, error)
+	Authenticate(credential SerializedCredentialIfc) (IdentityIfc, error)
 }
 

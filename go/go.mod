@@ -1,5 +1,3 @@
-module github.com/DigiStratum/GoStratifyPlatform-SDK
+module github.com/DigiStratum/StratifyPlatform-SDK/go
 
 go 1.17
-
-require github.com/DigiStratum/GoLib v0.0.0-20221210223712-45b793a24420
